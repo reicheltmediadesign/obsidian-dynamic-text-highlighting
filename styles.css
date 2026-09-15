@@ -1,0 +1,81 @@
+/* Dynamic Text Highlighting
+ *
+ * Every match has the classes .dth-match and .dth-style-<style>, plus the
+ * highlighter's own CSS class if one is set. The highlighter color is
+ * available as --dth-color.
+ *
+ * To restyle a highlighter in a CSS snippet, set --dth-background and
+ * --dth-foreground on its CSS class, e.g.
+ *   .my-class { --dth-background: linear-gradient(135deg, #ff2d87, #7b2ff7); }
+ */
+
+.dth-match {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.dth-text-dark {
+  --dth-contrast: #1a1a1a;
+}
+
+.dth-text-light {
+  --dth-contrast: #ffffff;
+}
+
+.dth-style-highlight {
+  background: var(--dth-background, var(--dth-color));
+  color: var(--dth-foreground, var(--dth-contrast));
+  border-radius: 2px;
+}
+
+.dth-style-badge {
+  padding: 0 0.35em;
+  border-radius: var(--radius-s);
+  background: var(--dth-background, var(--dth-color));
+  color: var(--dth-foreground, var(--dth-contrast));
+  font-weight: var(--font-semibold);
+  line-height: 1.35;
+}
+
+.markdown-rendered .dth-style-badge {
+  display: inline-block;
+}
+
+.dth-style-text {
+  color: var(--dth-foreground, var(--dth-color));
+}
+
+.dth-style-underline {
+  text-decoration: underline wavy var(--dth-color);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
+.cm-line.dth-line {
+  background-color: color-mix(in srgb, var(--dth-color) 20%, transparent);
+}
+
+.dth-selection-match {
+  background-color: color-mix(in srgb, var(--text-accent) 25%, transparent);
+  border-radius: 2px;
+}
+
+.dth-selection-match-main {
+  background-color: transparent;
+  outline: 1px solid color-mix(in srgb, var(--text-accent) 60%, transparent);
+}
+
+@media print {
+  .dth-style-badge {
+    break-inside: avoid;
+  }
+}
+
+.dth-import-input {
+  width: 100%;
+  min-height: 14em;
+  font-family: var(--font-monospace);
+  font-size: var(--font-smaller);
+}

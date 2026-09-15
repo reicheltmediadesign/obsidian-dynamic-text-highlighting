@@ -1,0 +1,12 @@
+node_modules/
+
+# Build output, published as release asset
+main.js
+*.js.map
+
+# Plugin settings of a local test vault
+data.json
+
+.DS_Store
+.vscode/
+.idea/
