@@ -111,25 +111,6 @@ The plugin works entirely offline. It makes no network requests and collects no 
 
 Requires Obsidian 1.13.0 or later.
 
-## Development
-
-Requires Node.js 22 or later.
-
-```bash
-npm install
-npm run dev     # rebuild main.js on every change
-npm run build   # type check and production build
-npm run lint    # lint with eslint-plugin-obsidianmd
-```
-
-To test changes, copy `main.js`, `manifest.json` and `styles.css` into `<your vault>/.obsidian/plugins/dynamic-text-highlighting/` after building, or clone the repository into that folder.
-
-### Releasing a new version
-
-1. Run `npm version patch`, `npm version minor` or `npm version major`. This updates `package.json`, `manifest.json` and `versions.json` and creates a Git tag without a `v` prefix.
-2. Push the commit and the tag: `git push --follow-tags`.
-3. The release workflow lints and builds the plugin and creates a draft release with `main.js`, `manifest.json` and `styles.css`. Review and publish it on GitHub.
-
 ## Acknowledgements
 
 Inspired by [Dynamic Highlights](https://github.com/nothingislost/obsidian-dynamic-highlights) by NothingIsLost, which is no longer listed in the community plugins directory. This plugin is a separate implementation and does not contain its code.
