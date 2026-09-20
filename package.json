@@ -1,6 +1,6 @@
 {
   "name": "dynamic-text-highlighting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Highlight text with custom search terms, regular expressions and badges, and highlight all matches of the selected word.",
   "main": "main.js",
   "private": true,

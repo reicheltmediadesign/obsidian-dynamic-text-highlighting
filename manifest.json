@@ -1,7 +1,7 @@
 {
   "id": "dynamic-text-highlighting",
   "name": "Dynamic Text Highlighting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.13.0",
   "description": "Highlight text with custom search terms, regular expressions and badges in the editor, reading view and PDF export, and highlight all matches of the selected word.",
   "author": "Philipp Reichelt",
